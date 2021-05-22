@@ -31,6 +31,18 @@ export default {
                 .catch(err => {
                     console.log(err);
                 });
+        },
+        removeItem() {
+            axios
+                .delete("api/item/" + this.item.id)
+                .then(res => {
+                    if (res.status === 200) {
+                        this.$emit("itemchanged");
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
         }
     }
 };
