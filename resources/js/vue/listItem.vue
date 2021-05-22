@@ -18,7 +18,20 @@
 export default {
     props: ["item"],
     methods: {
-        updateCheck() {}
+        updateCheck() {
+            const url = "api/item/" + this.item.id;
+            const data = { item: this.item };
+            axios
+                .put(url, data)
+                .then(res => {
+                    if (res.status === 200) {
+                        this.$emit("itemchanged");
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
     }
 };
 </script>
