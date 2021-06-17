@@ -2,6 +2,10 @@
 
 vue와 laravel을 이용한 todoList
 
+mysql DB를 사용하였고 소스상 포트는 23306사용
+
+시작커맨드 php artisan serve
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
